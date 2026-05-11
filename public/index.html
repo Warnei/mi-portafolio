@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Portfolio homepage for a frontend-focused product builder."
+      content="Alex Rivera's portfolio for product-focused frontend work, landing pages, and interface design."
     />
     <title>Alex Rivera | Frontend Portfolio</title>
     <link rel="stylesheet" href="styles.css" />
@@ -33,34 +33,37 @@
     </header>
 
     <main id="main-content">
-      <section class="hero section" id="home">
+      <section class="hero section" id="home" aria-labelledby="hero-title">
         <div class="shell hero-grid">
           <div class="hero-copy" data-reveal>
-            <p class="eyebrow">Product-minded frontend portfolio</p>
-            <h1>Designing crisp interfaces for teams that need speed, clarity, and trust.</h1>
+            <p class="eyebrow">Frontend portfolio for product teams</p>
+            <h1 id="hero-title">
+              Building fast, credible web experiences with clear structure and polished
+              execution.
+            </h1>
             <p class="lede">
-              I build responsive web experiences that are easy to scan, quick to use,
-              and careful with details. My focus is landing pages, product surfaces, and
-              systems that need to feel modern without becoming noisy.
+              I design and build responsive interfaces that help users understand,
+              decide, and act quickly. The focus is practical: homepage systems,
+              product launch pages, and UI work that stays readable at scale.
             </p>
 
-            <div class="hero-actions">
-              <a class="button button-primary" href="#work">View selected work</a>
+            <div class="hero-actions" aria-label="Primary actions">
+              <a class="button button-primary" href="#work">See selected work</a>
               <a class="button button-secondary" href="#contact">Start a project</a>
             </div>
 
             <dl class="stats" aria-label="Summary">
               <div>
                 <dt>7+ years</dt>
-                <dd>shaping interfaces for B2B and creative teams</dd>
+                <dd>shaping interfaces for product, startup, and agency teams</dd>
               </div>
               <div>
                 <dt>18 launches</dt>
-                <dd>product pages, dashboards, and marketing sites</dd>
+                <dd>marketing pages, dashboards, and portfolio sites shipped</dd>
               </div>
               <div>
                 <dt>Remote ready</dt>
-                <dd>comfortable collaborating across time zones</dd>
+                <dd>comfortable collaborating across distributed teams and time zones</dd>
               </div>
             </dl>
           </div>
@@ -76,16 +79,16 @@
 
               <div class="profile-meta">
                 <p class="panel-kicker">Available for new work</p>
-                <h2>Frontend engineer, based in Medellin</h2>
+                <h2>Frontend engineer based in Medellin</h2>
                 <p>
-                  Building clear interfaces for startups, agencies, and in-house product
-                  teams.
+                  I help teams turn scattered ideas into a site that feels sharp,
+                  trustworthy, and easy to maintain.
                 </p>
               </div>
 
               <ul class="availability-list">
-                <li>Focus: React, design systems, CSS architecture</li>
-                <li>Typical scope: landing pages, product UI, content hubs</li>
+                <li>Focus: React, component systems, and CSS architecture</li>
+                <li>Typical scope: landing pages, product UI, and content hubs</li>
                 <li>Preferred cadence: small teams with fast feedback loops</li>
               </ul>
             </div>
@@ -93,19 +96,51 @@
         </div>
       </section>
 
-      <section class="section section-muted" id="work">
+      <section class="section section-muted" id="work" aria-labelledby="work-title">
         <div class="shell">
           <div class="section-heading" data-reveal>
             <p class="eyebrow">Selected work</p>
-            <h2>Three recent projects that show range without losing focus.</h2>
+            <h2 id="work-title">Three projects that show range without losing clarity.</h2>
+            <p class="body-copy">
+              Each example is built around a different kind of problem, but the common
+              thread is the same: strong structure, fast scanning, and careful detail.
+            </p>
           </div>
 
           <div class="project-tools" data-reveal>
             <div class="filter-group" role="group" aria-label="Filter projects">
-              <button class="filter-button is-active" type="button" data-project-filter="all" aria-pressed="true">All</button>
-              <button class="filter-button" type="button" data-project-filter="product" aria-pressed="false">Product</button>
-              <button class="filter-button" type="button" data-project-filter="operations" aria-pressed="false">Operations</button>
-              <button class="filter-button" type="button" data-project-filter="portfolio" aria-pressed="false">Portfolio</button>
+              <button
+                class="filter-button is-active"
+                type="button"
+                data-project-filter="all"
+                aria-pressed="true"
+              >
+                All
+              </button>
+              <button
+                class="filter-button"
+                type="button"
+                data-project-filter="product"
+                aria-pressed="false"
+              >
+                Product
+              </button>
+              <button
+                class="filter-button"
+                type="button"
+                data-project-filter="operations"
+                aria-pressed="false"
+              >
+                Operations
+              </button>
+              <button
+                class="filter-button"
+                type="button"
+                data-project-filter="portfolio"
+                aria-pressed="false"
+              >
+                Portfolio
+              </button>
             </div>
             <p class="filter-status" data-project-status aria-live="polite">Showing 3 projects</p>
           </div>
@@ -128,7 +163,12 @@
               </ul>
             </article>
 
-            <article class="project-card" data-reveal data-project-card data-project-tags="operations">
+            <article
+              class="project-card"
+              data-reveal
+              data-project-card
+              data-project-tags="operations"
+            >
               <div class="project-header">
                 <p class="project-type">Internal tool</p>
                 <span class="project-tag">Operational UI</span>
@@ -145,7 +185,12 @@
               </ul>
             </article>
 
-            <article class="project-card" data-reveal data-project-card data-project-tags="portfolio">
+            <article
+              class="project-card"
+              data-reveal
+              data-project-card
+              data-project-tags="portfolio"
+            >
               <div class="project-header">
                 <p class="project-type">Portfolio refresh</p>
                 <span class="project-tag">Brand-led</span>
@@ -165,11 +210,11 @@
         </div>
       </section>
 
-      <section class="section" id="services">
+      <section class="section" id="services" aria-labelledby="services-title">
         <div class="shell split-layout">
           <div class="section-heading" data-reveal>
             <p class="eyebrow">Services</p>
-            <h2>Practical front-end work for teams that want the page to earn its keep.</h2>
+            <h2 id="services-title">Practical frontend work for teams that need the page to earn its keep.</h2>
             <p class="body-copy">
               The work usually starts with structure, content order, and component
               behavior, then moves into visual polish and responsive refinement.
@@ -193,33 +238,36 @@
         </div>
       </section>
 
-      <section class="section section-muted" id="about">
+      <section class="section section-muted" id="about" aria-labelledby="about-title">
         <div class="shell about-grid">
           <div class="section-heading" data-reveal>
             <p class="eyebrow">About</p>
-            <h2>Built for teams that need a calm interface and a dependable hand.</h2>
+            <h2 id="about-title">Built for teams that need a calm interface and a dependable hand.</h2>
           </div>
 
           <div class="about-copy" data-reveal>
             <p>
-              I like work that is straightforward to use and straightforward to ship. That
-              means clear content structure, predictable patterns, and visual systems that
-              hold together when the page gets dense.
+              I like work that is straightforward to use and straightforward to ship.
+              That means clear content structure, predictable patterns, and visual
+              systems that hold together when the page gets dense.
             </p>
             <p>
-              My best-fit projects are those where frontend quality matters at the point of
-              decision: pricing pages, product onboarding, admin tooling, and portfolio
-              sites that need to feel credible on first glance.
+              My best-fit projects are those where frontend quality matters at the point
+              of decision: pricing pages, product onboarding, admin tooling, and
+              portfolio sites that need to feel credible on first glance.
             </p>
           </div>
         </div>
       </section>
 
-      <section class="section" id="contact">
+      <section class="section" id="contact" aria-labelledby="contact-title">
         <div class="shell contact-grid">
           <div data-reveal>
             <p class="eyebrow">Contact</p>
-            <h2>Have a page, product surface, or portfolio that needs a stronger first impression?</h2>
+            <h2 id="contact-title">
+              Have a page, product surface, or portfolio that needs a stronger first
+              impression?
+            </h2>
           </div>
 
           <div class="contact-card" data-reveal>
@@ -227,7 +275,12 @@
               <span>Email</span>
               <strong>alex@alexrivera.dev</strong>
             </a>
-            <a class="contact-line" href="https://www.linkedin.com" rel="noreferrer" target="_blank">
+            <a
+              class="contact-line"
+              href="https://www.linkedin.com"
+              rel="noreferrer"
+              target="_blank"
+            >
               <span>LinkedIn</span>
               <strong>linkedin.com/in/alexrivera</strong>
             </a>
@@ -239,6 +292,7 @@
         </div>
       </section>
     </main>
+
     <script src="js/interactions.js" defer></script>
   </body>
 </html>
