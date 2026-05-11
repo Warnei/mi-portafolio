@@ -8,22 +8,22 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+const publicDir = path.resolve(__dirname, '../public');
+const indexFile = path.join(publicDir, 'index.html');
 
-// Configuración de archivos estáticos
-app.use(express.static(path.join(__dirname, '../public')));
+app.disable('x-powered-by');
+app.set('indexFile', indexFile);
 
-// Middlewares
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Rutas
 app.use('/', mainRoutes);
+app.use(express.static(publicDir));
 
-// Manejo de errores 404
 app.use((req, res) => {
-    res.status(404).send('Página no encontrada');
+    res.status(404).send('Pagina no encontrada');
 });
 
 app.listen(PORT, () => {
-    console.log(`Servidor corriendo profesionalmente en http://localhost:${PORT}`);
+    console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });

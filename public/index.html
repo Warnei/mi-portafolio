@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio homepage for a frontend-focused product builder."
+    />
+    <title>Alex Rivera | Frontend Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+      <div class="shell header-inner">
+        <a class="brand" href="#home" aria-label="Alex Rivera home">
+          <span class="brand-mark" aria-hidden="true">AR</span>
+          <span class="brand-text">
+            <strong>Alex Rivera</strong>
+            <span>Frontend Engineer</span>
+          </span>
+        </a>
+
+        <nav class="site-nav" aria-label="Primary">
+          <a href="#work">Work</a>
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#contact" class="nav-cta">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="hero section" id="home">
+        <div class="shell hero-grid">
+          <div class="hero-copy" data-reveal>
+            <p class="eyebrow">Product-minded frontend portfolio</p>
+            <h1>Designing crisp interfaces for teams that need speed, clarity, and trust.</h1>
+            <p class="lede">
+              I build responsive web experiences that are easy to scan, quick to use,
+              and careful with details. My focus is landing pages, product surfaces, and
+              systems that need to feel modern without becoming noisy.
+            </p>
+
+            <div class="hero-actions">
+              <a class="button button-primary" href="#work">View selected work</a>
+              <a class="button button-secondary" href="#contact">Start a project</a>
+            </div>
+
+            <dl class="stats" aria-label="Summary">
+              <div>
+                <dt>7+ years</dt>
+                <dd>shaping interfaces for B2B and creative teams</dd>
+              </div>
+              <div>
+                <dt>18 launches</dt>
+                <dd>product pages, dashboards, and marketing sites</dd>
+              </div>
+              <div>
+                <dt>Remote ready</dt>
+                <dd>comfortable collaborating across time zones</dd>
+              </div>
+            </dl>
+          </div>
+
+          <aside class="hero-panel" aria-label="Profile snapshot" data-reveal>
+            <div class="panel-card profile-card">
+              <div class="profile-visual" aria-hidden="true">
+                <div class="profile-glow"></div>
+                <div class="profile-orbit orbit-one"></div>
+                <div class="profile-orbit orbit-two"></div>
+                <div class="profile-avatar">AR</div>
+              </div>
+
+              <div class="profile-meta">
+                <p class="panel-kicker">Available for new work</p>
+                <h2>Frontend engineer, based in Medellin</h2>
+                <p>
+                  Building clear interfaces for startups, agencies, and in-house product
+                  teams.
+                </p>
+              </div>
+
+              <ul class="availability-list">
+                <li>Focus: React, design systems, CSS architecture</li>
+                <li>Typical scope: landing pages, product UI, content hubs</li>
+                <li>Preferred cadence: small teams with fast feedback loops</li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section section-muted" id="work">
+        <div class="shell">
+          <div class="section-heading" data-reveal>
+            <p class="eyebrow">Selected work</p>
+            <h2>Three recent projects that show range without losing focus.</h2>
+          </div>
+
+          <div class="project-tools" data-reveal>
+            <div class="filter-group" role="group" aria-label="Filter projects">
+              <button class="filter-button is-active" type="button" data-project-filter="all" aria-pressed="true">All</button>
+              <button class="filter-button" type="button" data-project-filter="product" aria-pressed="false">Product</button>
+              <button class="filter-button" type="button" data-project-filter="operations" aria-pressed="false">Operations</button>
+              <button class="filter-button" type="button" data-project-filter="portfolio" aria-pressed="false">Portfolio</button>
+            </div>
+            <p class="filter-status" data-project-status aria-live="polite">Showing 3 projects</p>
+          </div>
+
+          <div class="project-grid">
+            <article class="project-card" data-reveal data-project-card data-project-tags="product">
+              <div class="project-header">
+                <p class="project-type">Product launch</p>
+                <span class="project-tag">Conversion-first</span>
+              </div>
+              <h3>Nimbus Analytics</h3>
+              <p>
+                A focused SaaS landing experience with a pricing story, proof blocks, and
+                a compact demo request flow.
+              </p>
+              <ul class="project-points">
+                <li>Reduced friction in the signup path</li>
+                <li>Built a modular section system for reuse</li>
+                <li>Balanced density with readability on mobile</li>
+              </ul>
+            </article>
+
+            <article class="project-card" data-reveal data-project-card data-project-tags="operations">
+              <div class="project-header">
+                <p class="project-type">Internal tool</p>
+                <span class="project-tag">Operational UI</span>
+              </div>
+              <h3>Northstar Ops Console</h3>
+              <p>
+                A working interface for support and operations, tuned for fast scanning
+                and repeat actions across long sessions.
+              </p>
+              <ul class="project-points">
+                <li>Dense information layout with clear hierarchy</li>
+                <li>Reusable status components and table patterns</li>
+                <li>Accessible color and keyboard-friendly controls</li>
+              </ul>
+            </article>
+
+            <article class="project-card" data-reveal data-project-card data-project-tags="portfolio">
+              <div class="project-header">
+                <p class="project-type">Portfolio refresh</p>
+                <span class="project-tag">Brand-led</span>
+              </div>
+              <h3>Studio Frame</h3>
+              <p>
+                A restrained personal site for a creative director, shaped around work
+                samples, bio, and direct contact.
+              </p>
+              <ul class="project-points">
+                <li>Editorial feel without excessive decoration</li>
+                <li>Simple content model that stays easy to maintain</li>
+                <li>Strong first screen across desktop and mobile</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="services">
+        <div class="shell split-layout">
+          <div class="section-heading" data-reveal>
+            <p class="eyebrow">Services</p>
+            <h2>Practical front-end work for teams that want the page to earn its keep.</h2>
+            <p class="body-copy">
+              The work usually starts with structure, content order, and component
+              behavior, then moves into visual polish and responsive refinement.
+            </p>
+          </div>
+
+          <div class="service-list">
+            <article class="service-item" data-reveal>
+              <h3>Landing pages</h3>
+              <p>Homepage builds, campaign pages, and product launch screens tuned for clarity.</p>
+            </article>
+            <article class="service-item" data-reveal>
+              <h3>Design systems</h3>
+              <p>Tokens, components, and documentation that make teams faster and less fragile.</p>
+            </article>
+            <article class="service-item" data-reveal>
+              <h3>UI cleanup</h3>
+              <p>Refinement passes that improve spacing, hierarchy, accessibility, and consistency.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-muted" id="about">
+        <div class="shell about-grid">
+          <div class="section-heading" data-reveal>
+            <p class="eyebrow">About</p>
+            <h2>Built for teams that need a calm interface and a dependable hand.</h2>
+          </div>
+
+          <div class="about-copy" data-reveal>
+            <p>
+              I like work that is straightforward to use and straightforward to ship. That
+              means clear content structure, predictable patterns, and visual systems that
+              hold together when the page gets dense.
+            </p>
+            <p>
+              My best-fit projects are those where frontend quality matters at the point of
+              decision: pricing pages, product onboarding, admin tooling, and portfolio
+              sites that need to feel credible on first glance.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="shell contact-grid">
+          <div data-reveal>
+            <p class="eyebrow">Contact</p>
+            <h2>Have a page, product surface, or portfolio that needs a stronger first impression?</h2>
+          </div>
+
+          <div class="contact-card" data-reveal>
+            <a class="contact-line" href="mailto:alex@alexrivera.dev">
+              <span>Email</span>
+              <strong>alex@alexrivera.dev</strong>
+            </a>
+            <a class="contact-line" href="https://www.linkedin.com" rel="noreferrer" target="_blank">
+              <span>LinkedIn</span>
+              <strong>linkedin.com/in/alexrivera</strong>
+            </a>
+            <a class="contact-line" href="https://github.com" rel="noreferrer" target="_blank">
+              <span>GitHub</span>
+              <strong>github.com/alexrivera</strong>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="js/interactions.js" defer></script>
+  </body>
+</html>
