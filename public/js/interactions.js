@@ -16,6 +16,19 @@
     });
   };
 
+  const revealAboveFold = () => {
+    const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+
+    revealTargets.forEach((element) => {
+      const rect = element.getBoundingClientRect();
+      const isAboveFold = rect.top < viewportHeight * 1.08 && rect.bottom > 0;
+
+      if (isAboveFold) {
+        element.classList.add('is-visible');
+      }
+    });
+  };
+
   const revealNow = (elements) => {
     elements.forEach((element) => element.classList.add('is-visible'));
   };
@@ -41,6 +54,7 @@
       );
 
       revealTargets.forEach((element) => observer.observe(element));
+      window.requestAnimationFrame(revealAboveFold);
     }
   }
 
@@ -154,11 +168,11 @@
     if (!status) return;
 
     if (visibleCount === 0) {
-      status.textContent = 'No projects match this filter.';
+      status.textContent = 'No hay areas que coincidan con este filtro.';
       return;
     }
 
-    status.textContent = `Showing ${visibleCount} project${visibleCount === 1 ? '' : 's'}`;
+    status.textContent = `Mostrando ${visibleCount} area${visibleCount === 1 ? '' : 's'}`;
   };
 
   const clearHideTimer = (card) => {
@@ -247,3 +261,4 @@
 
   applyFilter('all');
 })();
+
