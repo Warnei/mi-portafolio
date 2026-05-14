@@ -245,6 +245,41 @@ section > .shell {
   border-color: rgba(121, 240, 196, 0.34);
 }
 
+.language-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.22rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.language-button {
+  min-width: 2.25rem;
+  min-height: 2rem;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 900;
+  line-height: 1;
+  transition:
+    background-color 160ms ease,
+    color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.language-button:hover,
+.language-button.is-active {
+  color: #07111a;
+  background: linear-gradient(135deg, var(--accent), #9bf6e2);
+  box-shadow: 0 8px 18px rgba(2, 8, 14, 0.22);
+}
+
 .section {
   padding: 5.5rem 0;
 }
@@ -765,7 +800,7 @@ h3 {
 }
 
 .contact-line::after {
-  content: "↗";
+  content: "\2197";
   flex: 0 0 auto;
   color: var(--accent);
   transition: transform 160ms ease;
@@ -792,6 +827,7 @@ h3 {
 
 .button:focus-visible,
 .filter-button:focus-visible,
+.language-button:focus-visible,
 .contact-line:focus-visible,
 .brand:focus-visible,
 .site-nav a:focus-visible {
@@ -890,6 +926,10 @@ h3 {
   .site-nav {
     width: 100%;
     justify-content: flex-start;
+  }
+
+  .language-switcher {
+    align-self: flex-start;
   }
 
   .brand-text span {
