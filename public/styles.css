@@ -560,17 +560,14 @@ h3 {
 }
 
 .profile-avatar {
-  width: 132px;
-  aspect-ratio: 1;
-  display: grid;
-  place-items: center;
+  position: relative;
+  z-index: 1;
+  width: min(72%, 258px);
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 34%;
   border-radius: 1.7rem;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.08)),
-    linear-gradient(135deg, rgba(121, 240, 196, 0.32), rgba(119, 169, 255, 0.2));
   border: 1px solid rgba(167, 190, 216, 0.18);
-  font-size: 2rem;
-  font-weight: 800;
   box-shadow: 0 24px 70px rgba(7, 18, 28, 0.48);
 }
 
